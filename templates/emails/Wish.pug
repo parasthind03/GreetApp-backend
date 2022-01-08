@@ -1,0 +1,16 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+    h2 Today is your friend #{subject.friend.name}'s #{subject.friend.event}.
+    h4 Wish them if you haven't yet!
+    table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+      tbody
+        tr
+          td(align='left')
+            table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+              tbody
+                tr
+                  td
+                    //- a(href=`${url}`, target='_blank') Reset your password
+    p If you don't have a friend by that name, please ignore this email!`
