@@ -33,12 +33,6 @@ const userSchema = new mongoose.Schema(
 		},
 		mobileNo: String,
 		friends: [{ type: mongoose.Schema.ObjectId, ref: 'Friend' }],
-		followers: [
-			{
-				type: mongoose.Schema.ObjectId,
-				ref: 'User'
-			}
-		],
 		following: [
 			{
 				type: mongoose.Schema.ObjectId,
